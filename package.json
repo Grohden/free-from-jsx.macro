@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.macro.js",
+  "types": "index.d.ts",
   "repository": "https://github.com/Grohden/babel-plugin-resolve-barrel-files",
   "author": "gabriel.rohden <gabriel_rohden@outlook.com>",
   "license": "MIT",
