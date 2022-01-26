@@ -1,0 +1,13 @@
+{
+  "incremental": true,
+  "typescript": {
+    "indentWidth": 2
+  },
+  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs}"],
+  "excludes": [
+    "**/node_modules"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.62.0.wasm"
+  ]
+}
