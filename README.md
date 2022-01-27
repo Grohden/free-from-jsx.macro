@@ -72,7 +72,22 @@ MyComponent({
 ### Class components and ts
 
 Typescript will not be happy with "calling a class", so if a component is declared as class for TS, it will not type
-check unfortunately
+check, unfortunately.
+
+You can hack ts though:
+```ts
+import React from "react";
+import { View as RNView } from 'react-native';
+
+
+type HackCtoFC<T extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>> =
+  React.FC<React.ComponentProps<T>>
+
+// usage of this is typed and accepted
+const View = RNView as unknown as HackCtoFC<typeof RNView>;
+```
+
+> Note: This is too hacky in my opinion. Not sure if I would recommend this approach.
 
 ### Keys
 
